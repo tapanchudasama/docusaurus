@@ -4,7 +4,8 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import {matchRoutes} from 'react-router-config';
+
+import {matchRoutes} from 'react-router';
 import routesChunkNames from '@generated/routesChunkNames';
 import routes from '@generated/routes';
 import prefetchHelper from './prefetch';
@@ -71,7 +72,7 @@ const docusaurus = {
     fetched[routePath] = true;
 
     // Find all webpack chunk names needed.
-    const matches = matchRoutes(routes, routePath);
+    const matches = matchRoutes(routes, routePath)!;
 
     const chunkNamesNeeded = flatten(
       matches.map((match) => getChunkNamesToLoad(match.route.path as string)),

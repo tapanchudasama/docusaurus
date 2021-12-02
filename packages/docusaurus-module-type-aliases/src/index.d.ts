@@ -34,11 +34,11 @@ declare module '@generated/registry' {
 }
 
 declare module '@generated/routes' {
-  import type {RouteConfig} from 'react-router-config';
+  import type {RouteObject} from 'react-router';
 
   type Route = {
     readonly path: string;
-    readonly component: RouteConfig['component'];
+    readonly component: RouteObject['element'];
     readonly exact?: boolean;
     readonly routes?: Route[];
   };
@@ -149,6 +149,8 @@ declare module '@docusaurus/Link' {
       readonly to?: string;
       readonly href?: string;
       readonly autoAddBaseUrl?: boolean;
+      readonly isActive?: boolean;
+      readonly activeClassName?: string;
 
       // escape hatch in case broken links check is annoying for a specific link
       readonly 'data-noBrokenLinkCheck'?: boolean;
@@ -223,12 +225,7 @@ declare module '@docusaurus/Translate' {
 }
 
 declare module '@docusaurus/router' {
-  // eslint-disable-next-line import/no-extraneous-dependencies
   export * from 'react-router-dom';
-}
-declare module '@docusaurus/history' {
-  // eslint-disable-next-line import/no-extraneous-dependencies
-  export * from 'history';
 }
 
 declare module '@docusaurus/useDocusaurusContext' {
@@ -298,10 +295,9 @@ declare module '@docusaurus/Noop' {
 }
 
 declare module '@docusaurus/renderRoutes' {
-  // eslint-disable-next-line import/no-extraneous-dependencies
-  import {renderRoutes} from 'react-router-config';
+  import type {useRoutes} from 'react-router';
 
-  export default renderRoutes;
+  export default useRoutes;
 }
 
 declare module '@docusaurus/useGlobalData' {

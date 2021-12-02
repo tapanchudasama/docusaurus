@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import {matchRoutes, RouteConfig as RRRouteConfig} from 'react-router-config';
+import {matchRoutes} from 'react-router';
 import resolvePathname from 'resolve-pathname';
 import fs from 'fs-extra';
 import {mapValues, pickBy, countBy} from 'lodash';
@@ -13,11 +13,6 @@ import {RouteConfig, ReportingSeverity} from '@docusaurus/types';
 import {removePrefix, removeSuffix, reportMessage} from '@docusaurus/utils';
 import {getAllFinalRoutes} from './utils';
 import path from 'path';
-
-function toReactRouterRoutes(routes: RouteConfig[]): RRRouteConfig[] {
-  // @ts-expect-error: types incompatible???
-  return routes as RRRouteConfig[];
-}
 
 type BrokenLink = {
   link: string;
@@ -49,7 +44,7 @@ function getPageBrokenLinks({
 
   function isBrokenLink(link: string) {
     const matchedRoutes = [link, decodeURI(link)]
-      .map((l) => matchRoutes(toReactRouterRoutes(routes), l))
+      .map((l) => matchRoutes(routes, l)!)
       .reduce((prev, cur) => prev.concat(cur));
     return matchedRoutes.length === 0;
   }

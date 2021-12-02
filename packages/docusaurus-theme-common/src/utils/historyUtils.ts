@@ -6,10 +6,12 @@
  */
 
 import {useEffect, useRef} from 'react';
-import {useHistory} from '@docusaurus/router';
-import type {Location, Action} from '@docusaurus/history';
+import {useHistory, Location, NavigationType} from '@docusaurus/router';
 
-type HistoryBlockHandler = (location: Location, action: Action) => void | false;
+type HistoryBlockHandler = (
+  location: Location,
+  action: NavigationType,
+) => void | false;
 
 /*
 Permits to register a handler that will be called on history actions (pop,push,replace)

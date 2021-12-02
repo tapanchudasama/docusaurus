@@ -14,8 +14,8 @@
   "dependencies": {
     "@types/react": "*",
     "@types/react-helmet": "*",
-    "@types/react-router-config": "*",
-    "@types/react-router-dom": "*"
+    "react-router": "6.x",
+    "react-router-dom": "6.x"
   },
   "license": "MIT"
 }
