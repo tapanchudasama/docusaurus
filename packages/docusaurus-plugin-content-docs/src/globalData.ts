@@ -20,13 +20,19 @@ import type {
   GlobalDoc,
 } from '@docusaurus/plugin-content-docs/client';
 
-export function toGlobalDataDoc(
-  doc: DocMetadata | CategoryGeneratedIndexMetadata,
+export function toGlobalDataDoc(doc: DocMetadata): GlobalDoc {
+  return {
+    id: doc.unversionedId,
+    path: doc.permalink,
+    sidebar: doc.sidebar,
+  };
+}
+
+export function toGlobalDataGeneratedIndex(
+  doc: CategoryGeneratedIndexMetadata,
 ): GlobalDoc {
   return {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    id: doc.unversionedId ? doc.unversionedId : doc.slug,
+    id: doc.slug,
     path: doc.permalink,
     sidebar: doc.sidebar,
   };
@@ -68,8 +74,6 @@ export function toGlobalSidebars(
 }
 
 export function toGlobalDataVersion(version: LoadedVersion): GlobalVersion {
-  const allDocs = [...version.docs, ...version.categoryGeneratedIndices];
-
   return {
     name: version.versionName,
     label: version.versionLabel,
