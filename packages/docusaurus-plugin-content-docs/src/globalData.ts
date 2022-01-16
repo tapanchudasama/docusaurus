@@ -38,16 +38,6 @@ export function toGlobalDataGeneratedIndex(
   };
 }
 
-export function toGlobalDataGeneratedIndex(
-  doc: CategoryGeneratedIndexMetadata,
-): GlobalDoc {
-  return {
-    id: doc.slug,
-    path: doc.permalink,
-    sidebar: doc.sidebar,
-  };
-}
-
 export function toGlobalSidebars(
   sidebars: Sidebars,
   version: LoadedVersion,
