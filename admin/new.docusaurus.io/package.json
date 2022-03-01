@@ -9,6 +9,6 @@
     "@netlify/functions": "^0.10.0"
   },
   "devDependencies": {
-    "netlify-cli": "^8.0.5"
+    "netlify-cli": "^9.9.1"
   }
 }
