@@ -28,7 +28,7 @@
     "@endiliey/react-ideal-image": "^0.0.11",
     "@docusaurus/theme-translations": "2.0.0-beta.14",
     "react-waypoint": "^10.1.0",
-    "sharp": "^0.29.1",
+    "sharp": "^0.30.3",
     "tslib": "^2.3.1",
     "webpack": "^5.61.0"
   },
