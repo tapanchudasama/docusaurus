@@ -1308,11 +1308,15 @@
     minimist "^1.2.0"
 
 "@crowdin/cli@^3.7.1":
-  version "3.7.7"
-  resolved "https://registry.yarnpkg.com/@crowdin/cli/-/cli-3.7.7.tgz#0d2baf888b37aac1cd8d8cb484b0826fa7b82a26"
-  integrity sha512-wN0NXLDymC9PgT3I6jMx/YLjcEtegAnFg7VaavzLfc1vFegD4lKlrvRmc0qV2IIiRMZLShEsS0QtYtAyhi/qew==
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/@crowdin/cli/-/cli-3.10.0.tgz#14f9071860f2fa1ebc918624fbe57bf9677e8f8f"
+  integrity sha512-ez2nZ84jLe/WppZ5ggfZtC9rDUyCbsYengsmKVKeUYfx30lccuyAeQltAdxcwU4v3f58hTNAty0VvCx9zLPl0Q==
   dependencies:
+    command-exists-promise "^2.0.2"
+    node-fetch "2.6.7"
     shelljs "^0.8.4"
+    tar "^4.4.8"
+    yauzl "^2.10.0"
 
 "@crowdin/crowdin-api-client@^1.10.6":
   version "1.12.4"
@@ -6274,6 +6278,11 @@ comma-separated-tokens@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/comma-separated-tokens/-/comma-separated-tokens-2.0.2.tgz#d4c25abb679b7751c880be623c1179780fe1dd98"
   integrity sha512-G5yTt3KQN4Yn7Yk4ed73hlZ1evrFKXeUW3086p3PRFNp7m2vIjI6Pg+Kgb+oyzhd9F2qdcoj67+y3SdxL5XWsg==
+
+command-exists-promise@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/command-exists-promise/-/command-exists-promise-2.0.2.tgz#7beecc4b218299f3c61fa69a4047aa0b36a64a99"
+  integrity sha512-T6PB6vdFrwnHXg/I0kivM3DqaCGZLjjYSOe0a5WgFKcz1sOnmOeIjnhQPXVXX3QjVbLyTJ85lJkX6lUpukTzaA==
 
 commander@^2.20.0, commander@^2.20.3, commander@^2.3.0, commander@^2.8.1:
   version "2.20.3"
@@ -13237,10 +13246,10 @@ node-fetch@2.6.1:
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
-node-fetch@^2.3.0, node-fetch@^2.6.0, node-fetch@^2.6.1, node-fetch@^2.6.5:
-  version "2.6.6"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.6.tgz#1751a7c01834e8e1697758732e9efb6eeadfaf89"
-  integrity sha512-Z8/6vRlTUChSdIgMa51jxQ4lrw/Jy5SOW10ObaA47/RElsAN2c5Pn8bTgFGWn/ibwzXTE8qwr1Yzx28vsecXEA==
+node-fetch@2.6.7, node-fetch@^2.3.0, node-fetch@^2.6.0, node-fetch@^2.6.1, node-fetch@^2.6.5:
+  version "2.6.7"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
+  integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
   dependencies:
     whatwg-url "^5.0.0"
 
@@ -17647,7 +17656,7 @@ tar-stream@^2.1.4, tar-stream@^2.2.0:
     inherits "^2.0.3"
     readable-stream "^3.1.1"
 
-tar@^4, tar@^4.4.12:
+tar@^4, tar@^4.4.12, tar@^4.4.8:
   version "4.4.19"
   resolved "https://registry.yarnpkg.com/tar/-/tar-4.4.19.tgz#2e4d7263df26f2b914dee10c825ab132123742f3"
   integrity sha512-a20gEsvHnWe0ygBY8JbxoM4w3SJdhc7ZAuxkLqh+nvNQN2IOt0B5lLgM490X5Hl8FF0dl0tOf2ewFYAlIFgzVA==
@@ -19623,7 +19632,7 @@ yargs@^16.0.0, yargs@^16.2.0:
     y18n "^5.0.5"
     yargs-parser "^20.2.2"
 
-yauzl@^2.4.2:
+yauzl@^2.10.0, yauzl@^2.4.2:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/yauzl/-/yauzl-2.10.0.tgz#c7eb17c93e112cb1086fa6d8e51fb0667b79a5f9"
   integrity sha1-x+sXyT4RLLEIb6bY5R+wZnt5pfk=
